@@ -1,0 +1,53 @@
+/** No CSS for this example */
+mat-card {
+    margin-bottom: 10px;
+}
+mat-form-field{
+  width: 100%;
+  display: block;
+} 
+.loginAll{
+  height: 100%;
+} 
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+.title-register{
+  text-align: center;
+  h1{
+    font-family: cursive;
+    font-size: 40px;
+  }
+}
+
+.icon-pass{
+  font-size: x-large !important;
+}
+.logo{
+  width: 100%;
+}
+.registerForm{
+  align-self: center !important;
+  padding: 2%;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  box-sizing: unset;
+  border-radius: 5px;
+  width: 90%;
+}
+.ingresar-btn{
+  width: 100%;
+}
+.registro{
+  margin-top: 10px;
+  text-align: center;
+  a{
+    text-decoration: auto;
+  }
+}
+.registro-logo{
+    border-radius: 100px;
+}

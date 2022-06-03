@@ -1,0 +1,76 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+.body-component{
+    width: 90%;
+}
+.toolbar{
+    background: #fff;
+    color: #000;
+    border-bottom: #d9d9d9 solid;
+}
+.example-header-image {
+    background-image: url('https://i.pinimg.com/originals/d5/b0/4c/d5b04cc3dcd8c17702549ebc5f1acf1a.png');
+    background-size: cover;
+}
+.example-card{
+    padding: 0px;
+    background: #6394fd;
+    border-radius: 20px;
+    box-shadow: none;
+    margin-right: 10px;
+}
+.name-user{
+    color: white;
+    align-self: center;
+    margin: 0px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.container-sidenav {
+    width: 100%;
+    height: 100%;
+}
+
+.sidenav-content {
+    background: #f4f4f4;
+    display: flex;
+    height: 100%;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+.sidenav {
+    width: 300px;
+}
+.menuHAm{
+    display: none;
+}
+@media (max-width: 600px) {
+    .menuHAm{
+        display: block;
+    }
+}
+.option-menu{
+    width: 100%;
+    button{
+        width: 100%;
+        height: 100px;
+        text-align: start;
+        font-size: 20px;
+        font-family: unset;
+    }
+    mat-icon{
+       line-height: inherit;
+       float: right;
+    }
+}
+.active{
+    background: #6394fd;
+    color: white;
+}

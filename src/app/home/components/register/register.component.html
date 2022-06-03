@@ -1,0 +1,50 @@
+<div fxLayout.xs="column" class="loginAll" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+    <div class="registerForm" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(30%-10px)">
+        <div class="title-register">
+          <h1>Registro</h1>
+          <img class="registro-logo" src="../../../../assets//img/icon-logo.png" alt="">
+        </div>
+        <div>
+          <form [formGroup]="registerForm">
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name" placeholder="pepito">
+                <mat-icon matSuffix>mood</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Apellido</mat-label>
+                <input matInput formControlName="surname">
+                <mat-icon matSuffix>mood</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Tipo de documento</mat-label>
+                <mat-select formControlName="document_type">
+                  <mat-option value="one">Nit</mat-option>
+                  <mat-option value="two">Cedula</mat-option>
+                </mat-select>
+              </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Documento</mat-label>
+                <input matInput formControlName="document" placeholder="123456">
+                <mat-icon matSuffix>account_box</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+              <mat-label>Correo</mat-label>
+              <input matInput formControlName="email" placeholder="pat@example.com">
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="legacy">
+              <mat-label>Contraseña</mat-label>
+              <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon class="icon-pass">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <button class="ingresar-btn" [disabled]="!registerForm.valid" mat-raised-button color="primary">
+               Registrar
+            </button>
+          </form>
+        </div>
+    </div>
+  </div>

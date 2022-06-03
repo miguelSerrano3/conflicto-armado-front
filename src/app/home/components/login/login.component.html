@@ -1,0 +1,39 @@
+<!-- <h1 fxHide fxShow.lg>LG</h1>
+<h1 fxHide fxShow.xl>XL</h1> -->
+
+<div fxLayout.xs="column" class="loginAll" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+  <div class="loginForm" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(30%-10px)">
+    <div class="sombra">
+      <div class="title-login">
+        <h1>Login</h1>
+        <mat-icon class="icon-login">supervised_user_circle</mat-icon>
+      </div>
+      <div>
+        <form [formGroup]="loginForm">
+          <mat-form-field appearance="legacy">
+            <mat-label>Correo</mat-label>
+            <input matInput formControlName="email" placeholder="pat@example.com">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="legacy">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon class="icon-pass">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button class="ingresar-btn" (click)="loginUser()" [disabled]="!loginForm.valid" mat-raised-button color="primary">
+             Ingresar
+          </button>
+        </form>
+      </div>
+      <p class="registro"><a routerLink="/register">Registrar me</a></p>
+    </div>
+  </div>
+  
+  <div fxFlex="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(30%-10px)">
+    <img src="../../../../assets/img/logo.png" alt="" class="logo">
+  </div>
+</div>
+  

@@ -1,0 +1,51 @@
+<div class="body">
+    <mat-toolbar class="toolbar">
+        <button (click)="drawer.toggle()" 
+            mat-icon-button class="example-icon menuHAm" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-card class="example-card">
+            <div mat-card-avatar class="example-header-image"></div>
+        </mat-card>
+        
+        <span>{{nameUser}}</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button class="example-icon favorite-icon" (click)="logout()">
+            Cerrar sesion
+          <mat-icon>input</mat-icon>
+        </button>
+    </mat-toolbar>
+    
+    <mat-drawer-container class="container-sidenav" autosize>
+        <mat-drawer #drawer
+            [opened]="!mobileQuery.matches"
+            class="example-sidenav sidenav"
+            [mode]="mobileQuery.matches ? 'over' : 'side'">
+          
+            <div class="option-menu">
+                <button (click)="closeMenu()"
+                    routerLink='homeDash'
+                    routerLinkActive="active"
+                    mat-raised-button>
+                    Inicio <mat-icon>home</mat-icon>
+                </button>
+                <button (click)="closeMenu()"
+                    routerLink='list-users'
+                    routerLinkActive="active"
+                    mat-raised-button>
+                    Usuarios <mat-icon>supervised_user_circle</mat-icon>
+                </button>
+                <button (click)="closeMenu()"
+                    routerLink='subsidios'
+                    routerLinkActive="active"
+                    mat-raised-button>
+                    Subsidios<mat-icon>credit_card</mat-icon>
+                </button>
+            </div>
+        </mat-drawer>
+        <div class="sidenav-content">
+          <div class="body-component"><router-outlet></router-outlet></div>
+        </div>
+      
+    </mat-drawer-container>
+</div>

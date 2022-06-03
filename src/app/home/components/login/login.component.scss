@@ -1,0 +1,55 @@
+/** No CSS for this example */
+mat-card {
+    margin-bottom: 10px;
+}
+mat-form-field{
+  width: 100%;
+} 
+.loginAll{
+  height: 100vh;
+} 
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+.icon-login{
+  font-size: 90px;
+  display: initial;
+}
+.title-login{
+  text-align: center;
+  h1{
+    font-family: cursive;
+    font-size: 40px;
+  }
+}
+form{
+  text-align: center;
+}
+.icon-pass{
+  font-size: x-large !important;
+}
+.logo{
+  width: 100%;
+}
+.loginForm{
+  align-self: center !important;
+  padding: 2%;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  box-sizing: unset;
+  border-radius: 5px;
+  width: 90%;
+}
+.ingresar-btn{
+  width: 100%;
+}
+.registro{
+  margin-top: 10px;
+  text-align: center;
+  a{
+    text-decoration: auto;
+  }
+}
