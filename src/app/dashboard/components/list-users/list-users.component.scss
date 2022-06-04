@@ -1,0 +1,42 @@
+table {
+    width: 100%;
+    th{
+        text-align: center;
+    }
+    td{
+        padding-right: 0px; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}
+.mat-elevation-z8{
+    margin: 0px auto;
+    margin-top: 1%;
+}
+.example-button-container{
+    .delete {
+        margin-right: 10px;
+        background: #6394fd !important
+    }
+}
+.addPerson{
+    width: 100%;
+    text-align: end;
+}
+.idUpdatePerson{
+    display: none;
+}
+.ml{
+    margin-left: 15px;
+    font-weight: 600;
+}
+.negrita{
+    font-weight: 600;
+}
+.btn-search mat-icon{
+    font-size: x-large !important;
+}
+.example-form-field {
+    width: 200px;
+}

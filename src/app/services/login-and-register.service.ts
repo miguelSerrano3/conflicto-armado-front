@@ -16,4 +16,20 @@ export class LoginAndRegisterService {
   login(data: any):Observable<User>{
     return this.http.post<User>(`${baseUrl}login`, data);
   }
+
+  saveUser(data: any):Observable<User>{
+    return this.http.post<User>(`${baseUrl}User`, data);
+  }
+
+  getUser():Observable<User[]>{
+    return this.http.get<User[]>(`${baseUrl}users`);
+  }
+
+  UserBy(data):Observable<User[]>{
+    return this.http.post<User[]>(`${baseUrl}UserBy`, data);
+  }
+
+  deleteUser(id: any): Observable<User[]> {
+    return this.http.delete<User[]>(`${baseUrl}User/${id}`);
+  }
 }

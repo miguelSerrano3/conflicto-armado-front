@@ -19,13 +19,13 @@
             <mat-form-field appearance="legacy">
                 <mat-label>Tipo de documento</mat-label>
                 <mat-select formControlName="document_type">
-                  <mat-option value="one">Nit</mat-option>
-                  <mat-option value="two">Cedula</mat-option>
+                  <mat-option value="Nit">Nit</mat-option>
+                  <mat-option value="Cedula">Cedula</mat-option>
                 </mat-select>
               </mat-form-field>
             <mat-form-field appearance="legacy">
                 <mat-label>Documento</mat-label>
-                <input matInput formControlName="document" placeholder="123456">
+                <input type="number" matInput formControlName="document" placeholder="123456">
                 <mat-icon matSuffix>account_box</mat-icon>
             </mat-form-field>
             <mat-form-field appearance="legacy">
@@ -41,9 +41,13 @@
                 <mat-icon class="icon-pass">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
             </mat-form-field>
-            <button class="ingresar-btn" [disabled]="!registerForm.valid" mat-raised-button color="primary">
+            <button class="ingresar-btn"
+            (click)="saveUser()"
+              [disabled]="!registerForm.valid"
+              mat-raised-button color="primary">
                Registrar
             </button>
+            <p class="registro"><a routerLink="/home">Login</a></p>
           </form>
         </div>
     </div>
