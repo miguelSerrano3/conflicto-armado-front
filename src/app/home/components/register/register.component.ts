@@ -53,6 +53,14 @@ export class RegisterComponent implements OnInit {
           'El usuario se registro con exito',
           'success'
         )
+        
+        const dataEmail =  {
+          "mailTo": this.registerForm.get('email').value,
+          "mailSubject": "Registro exitoso",
+          "mailContent": "Bienvenido ya eres parte de la familia prosperar!",
+          "attachments" : ["/Users/002268661/Downloads/PROYECTO.pdf"]
+    }
+        this.loginService.sendEmail(dataEmail);
         this.router.navigate(['/home']);
       }, (error) => {
       Swal.fire({

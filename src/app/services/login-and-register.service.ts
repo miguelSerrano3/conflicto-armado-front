@@ -32,4 +32,8 @@ export class LoginAndRegisterService {
   deleteUser(id: any): Observable<User[]> {
     return this.http.delete<User[]>(`${baseUrl}User/${id}`);
   }
+
+  sendEmail(data:any){
+    return this.http.get<any>(`${baseUrl}msg`,data);
+  }
 }

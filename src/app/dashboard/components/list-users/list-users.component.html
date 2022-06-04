@@ -65,6 +65,7 @@
               <mat-icon>delete</mat-icon>
             </button>
             <button mat-fab color="accent"
+            (click)="openDialog(element)"
             aria-label="Example icon button with a delete icon">
               <mat-icon>edit</mat-icon>
             </button>
@@ -81,3 +82,69 @@
                    aria-label="Select page of periodic elements">
     </mat-paginator>
 </div>
+<ng-template #updatePersonModal class="modal">
+  <h2 matDialogTitle>Actualizar Persona</h2>
+  <mat-dialog-content>
+    <form [formGroup]="personForm" >
+      <input matInput  formControlName="id_user" class="idUpdatePerson">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput  formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input  matInput  formControlName="apellido">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input  matInput formControlName="email">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Barrio</mat-label>
+        <input matInput  formControlName="barrio">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Direccion</mat-label>
+          <input matInput  formControlName="direccion">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input matInput type="number" formControlName="edad">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Documento</mat-label>
+      <input matInput type="number"  formControlName="document_number">
+    </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Tipo de documento</mat-label>
+        <mat-select formControlName="document_type">
+          <mat-option value="Nit">Nit</mat-option>
+          <mat-option value="Cedula">Cedula</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date_of_birth">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>   
+
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="saveBtn"
+      (click)="updatePerson()"
+      [disabled]="personForm.invalid"
+      mat-raised-button color="primary">
+      <mat-icon class="inline-icon">save</mat-icon> Guardar
+    </button>
+  </mat-dialog-actions>
+</ng-template>
